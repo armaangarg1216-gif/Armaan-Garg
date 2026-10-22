@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "For Jyeshtha",
+  "short_name": "Jyeshtha",
+  "description": "A little home for water check-ins, love notes, memories, and special dates.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#fff7f1",
+  "theme_color": "#fff7f1",
+  "icons": [
+    { "src": "./icons/app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "./icons/apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}

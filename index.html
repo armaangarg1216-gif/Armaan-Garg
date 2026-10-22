@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#fff7f1" />
+    <meta name="description" content="A little home for water check-ins, love notes, memories, and special dates." />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="For Jyeshtha" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="./icons/app-icon.svg" />
+    <title>For Jyeshtha · Your Friend</title>
+    <link rel="manifest" href="./manifest.webmanifest?v=10" />
+    <link rel="stylesheet" href="./styles.css?v=10" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <span aria-hidden="true"></span>
+        <div>
+          <p class="eyebrow">For Jyeshtha</p>
+          <h1>Your Friend</h1>
+        </div>
+        <button class="icon-button" id="themeButton" aria-label="Change theme" title="Change theme">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 7.4A9 9 0 1 1 12 3Z"/></svg>
+        </button>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p id="todayDate"></p>
+            <h2 id="dailyGreeting">Good evening, Jyeshtha.</h2>
+            <p id="dailyMessage"></p>
+          </div>
+          <button class="primary-action" id="surpriseButton">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 12v8H4v-8"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 1 1 2.2-3.7C10.5 4.5 12 7 12 7Z"/><path d="M12 7h4.5a2.5 2.5 0 1 0-2.2-3.7C13.5 4.5 12 7 12 7Z"/></svg>
+            Open a little surprise
+          </button>
+        </section>
+
+        <section class="quick-grid" aria-label="Today at a glance">
+          <article>
+            <span class="metric" id="waterMetric">3/8</span>
+            <p>Water glasses today</p>
+          </article>
+          <article>
+            <span class="metric">♥</span>
+            <p>Important dates</p>
+          </article>
+          <article>
+            <span class="metric">∞</span>
+            <p>Love notes</p>
+          </article>
+        </section>
+
+        <section class="section-heading">
+          <div>
+            <p class="eyebrow">Care dashboard</p>
+            <h2>Everything useful, in one soft place</h2>
+          </div>
+        </section>
+
+        <section class="feature-list">
+          <button class="feature-card active" data-panel="album">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8" cy="10" r="2"/><path d="m21 15-5-5L5 19"/></svg>
+            <span>Album</span>
+          </button>
+          <button class="feature-card" data-panel="vault">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 7h16v14H4z"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/><circle cx="12" cy="14" r="2"/></svg>
+            <span>Vault</span>
+          </button>
+          <button class="feature-card" data-panel="reminders">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2v6"/><path d="M6 8a6 6 0 1 0 12 0"/><path d="M5 22h14"/><path d="M8 18h8"/></svg>
+            <span>Reminders</span>
+          </button>
+          <button class="feature-card" data-panel="calendar">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M3 11h18"/></svg>
+            <span>Calendar</span>
+          </button>
+          <button class="feature-card" data-panel="notes">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a4 4 0 0 1 7-2.6A4 4 0 0 1 20 10Z"/></svg>
+            <span>Love Notes</span>
+          </button>
+          <button class="feature-card" data-panel="profile">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+            <span>Profile</span>
+          </button>
+        </section>
+
+        <section class="panel" id="panel" aria-live="polite"></section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Main navigation">
+        <button class="nav-item active" data-panel="home" aria-label="Home" title="Home">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg>
+          <span>Home</span>
+        </button>
+        <button class="nav-item" data-panel="vault" aria-label="Vault" title="Vault">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/></svg>
+          <span>Vault</span>
+        </button>
+        <button class="nav-item" data-panel="reminders" aria-label="Reminders" title="Reminders">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg>
+          <span>Care</span>
+        </button>
+        <button class="nav-item" data-panel="calendar" aria-label="Calendar" title="Calendar">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M3 11h18"/></svg>
+          <span>Dates</span>
+        </button>
+      </nav>
+    </div>
+
+    <script src="./app.js?v=10"></script>
+  </body>
+</html>
